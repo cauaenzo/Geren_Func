@@ -20,6 +20,7 @@ class GerenciadorFuncionarios:
         funcionario = Funcionario(nome, idade, cargo, sexo, data_nascimento, setor, salario)
         self.funcionarios.append(funcionario)
         print(f"Funcionário {nome} inserido com sucesso!")
+        return True  # Retorna True para indicar sucesso
 
     def listar_funcionarios(self):
         if not self.funcionarios:
@@ -35,6 +36,7 @@ class GerenciadorFuncionarios:
     Data de Nascimento: {func.data_nascimento} 
     Setor: {func.setor} 
     Salário: {func.salario}''')
+        return True  # Retorna True se listar funcionários com sucesso
 
     def editar_funcionario(self, indice, nome, idade, cargo, sexo, data_nascimento, setor, salario):
         if 0 <= indice < len(self.funcionarios):
@@ -46,13 +48,19 @@ class GerenciadorFuncionarios:
             self.funcionarios[indice].setor = setor
             self.funcionarios[indice].salario = salario
             print(f"Funcionário {nome} editado com sucesso!")
+            return True  # Retorna True se editar funcionário com sucesso
         else:
             print("Índice de funcionário inválido.")
+            return False  # Retorna False se índice inválido
 
     def remover_funcionario(self, indice):
         if 0 <= indice < len(self.funcionarios):
             nome = self.funcionarios[indice].nome
             del self.funcionarios[indice]
             print(f"Funcionário {nome} removido com sucesso!")
+            return True  # Retorna True se remover funcionário com sucesso
         else:
             print("Índice de funcionário inválido.")
+            return False  # Retorna False se índice inválido
+
+
