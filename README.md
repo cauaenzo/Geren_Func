@@ -1,3 +1,3 @@
 # Geren_Func
-##_ Sistema de gerenciamento de funcionário
+## Sistema de gerenciamento de funcionário
 
