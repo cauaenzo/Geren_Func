@@ -55,6 +55,5 @@ def menu_interativo(gerenciador):
         else:
             print("Opção inválida. Por favor, digite um número de 1 a 5.")
             continuar = input()
+    return
 
-gerenciador = GerenciadorFuncionarios()
-menu_interativo(gerenciador)
